@@ -29,7 +29,9 @@ class _MoviesHomePageState extends State<MoviesHomePage> {
     return BlocBuilder<MoviesHomeCubit, MoviesHomeState>(
       bloc: cubit,
       builder: (context, state) {
-        return const MoviesHomeTemplate();
+        return MoviesHomeTemplate(
+          onContinueButtonTap: cubit.onContinueButtonTap,
+        );
       },
     );
   }

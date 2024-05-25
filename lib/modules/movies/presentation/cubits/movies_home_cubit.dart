@@ -14,4 +14,8 @@ class MoviesHomeCubit extends Cubit<MoviesHomeState> {
         );
 
   final MoviesNavigator _moviesNavigator;
+
+  void onContinueButtonTap() {
+    _moviesNavigator.openMoviesList();
+  }
 }
