@@ -22,19 +22,14 @@ class _MoviesDetailsPageState extends State<MoviesDetailsPage> {
   @override
   void initState() {
     super.initState();
-    cubit.onInit();
   }
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<MoviesDetailsCubit, MoviesDetailsState>(
-      listener: (context, state) {
-        if (state.failure != null) {}
-      },
-      listenWhen: (previous, current) => previous.failure != current.failure,
+    return BlocBuilder<MoviesDetailsCubit, MoviesDetailsState>(
       bloc: cubit,
       builder: (context, state) {
-        return const MoviesDetailsTemplate();
+        return MoviesDetailsTemplate(movie: state.movie);
       },
     );
   }

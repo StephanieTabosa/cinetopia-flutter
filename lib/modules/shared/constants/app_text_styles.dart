@@ -12,6 +12,8 @@ class AppTextStyles {
 
   static final montserratBold16 = montserrat(size: 16, weight: FontWeight.w700);
 
+  static final montserratBold20 = montserrat(size: 20, weight: FontWeight.w700);
+
   static final montserratBold24 = montserrat(size: 24, weight: FontWeight.w700);
 
   static final montserratMedium14 = montserrat(size: 14, weight: FontWeight.w500);

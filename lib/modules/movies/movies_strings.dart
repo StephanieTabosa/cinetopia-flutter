@@ -1,6 +1,7 @@
 class MoviesStrings {
   static const home = _HomeStrings();
   static const movies = _MoviesListStrings();
+  static const details = _MovieDetailsStrings();
 }
 
 class _HomeStrings {
@@ -16,4 +17,10 @@ class _MoviesListStrings {
   String get title => 'Filmes populares';
   String release(String date) => 'Lançamento: $date';
   String get errorMessage => 'Erro ao carregar filmes, volte e tente novamente';
+}
+
+class _MovieDetailsStrings {
+  const _MovieDetailsStrings();
+
+  String rate(double rate) => 'Classificação: $rate';
 }

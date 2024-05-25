@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:modular_bloc_bind/modular_bloc_bind.dart';
 
 import '../shared/app_module.dart';
 import 'data/datasources/movies_datasource.dart';
@@ -43,15 +44,15 @@ class MoviesModule extends Module {
             moviesNavigator: i(),
           ),
         ),
-        Bind(
+        BlocBind.factory(
           (i) => MoviesListCubit(
             getMoviesListUsecase: i(),
             moviesNavigator: i(),
           ),
         ),
-        Bind(
+        BlocBind.factory(
           (i) => MoviesDetailsCubit(
-            moviesNavigator: i(),
+            movies: i.args.data,
           ),
         ),
       ];

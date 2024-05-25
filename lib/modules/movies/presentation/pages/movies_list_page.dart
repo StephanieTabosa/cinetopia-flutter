@@ -34,6 +34,9 @@ class _MoviesListPageState extends State<MoviesListPage> {
         return MoviesListTemplate(
           movies: state.movies,
           isLoading: state.moviesListStatus.isLoading,
+          openDetailsPage: (movieId) {
+            cubit.openDetailsPage(movieId);
+          },
         );
       },
     );

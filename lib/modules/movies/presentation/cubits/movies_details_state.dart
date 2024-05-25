@@ -2,26 +2,27 @@ part of 'movies_details_cubit.dart';
 
 class MoviesDetailsState extends Equatable {
   const MoviesDetailsState({
-    this.movieDetailStatus = Status.initial,
-    this.failure,
+    required this.movie,
   });
 
-  final Status movieDetailStatus;
-  final Failure? failure;
+  final Movies movie;
+
+  static MoviesDetailsState loaded(Movies movie) {
+    return MoviesDetailsState(
+      movie: movie,
+    );
+  }
 
   @override
   List<Object?> get props => [
-        movieDetailStatus,
-        failure,
+        movie,
       ];
 
   MoviesDetailsState copyWith({
-    Status? movieDetailStatus,
-    Failure? failure,
+    Movies? movie,
   }) {
     return MoviesDetailsState(
-      movieDetailStatus: movieDetailStatus ?? this.movieDetailStatus,
-      failure: failure ?? this.failure,
+      movie: movie ?? this.movie,
     );
   }
 }

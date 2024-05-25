@@ -50,4 +50,8 @@ class MoviesListCubit extends Cubit<MoviesListState> {
       },
     );
   }
+
+  void openDetailsPage(Movies movie) {
+    _moviesNavigator.openMoviesDetails(movie: movie);
+  }
 }

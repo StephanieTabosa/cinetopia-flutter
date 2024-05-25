@@ -8,15 +8,17 @@ import '../molecules/movie_item.dart';
 
 class MoviesListTemplate extends StatelessWidget {
   const MoviesListTemplate({
-    Key? key,
+    super.key,
     required this.movies,
     required this.isLoading,
+    required this.openDetailsPage,
     this.error = false,
-  }) : super(key: key);
+  });
 
   final List<Movies> movies;
   final bool isLoading;
   final bool error;
+  final void Function(Movies) openDetailsPage;
 
   @override
   Widget build(BuildContext context) {
@@ -70,8 +72,11 @@ class MoviesListTemplate extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: movies.length,
                   itemBuilder: (context, index) {
-                    return MovieItem(
-                      movie: movies[index],
+                    return InkWell(
+                      onTap: () => openDetailsPage(movies[index]),
+                      child: MovieItem(
+                        movie: movies[index],
+                      ),
                     );
                   },
                 ),
