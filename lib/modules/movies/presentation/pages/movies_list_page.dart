@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import '../../../shared/utils/status.dart';
 import '../../movies_module.dart';
 import '../cubits/movies_list_cubit.dart';
 import '../atomic/templates/movies_list_template.dart';
@@ -27,14 +28,13 @@ class _MoviesListPageState extends State<MoviesListPage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<MoviesListCubit, MoviesListState>(
-      listener: (context, state) {
-        if (state.failure != null) {}
-      },
-      listenWhen: (previous, current) => previous.failure != current.failure,
+    return BlocBuilder<MoviesListCubit, MoviesListState>(
       bloc: cubit,
       builder: (context, state) {
-        return const MoviesListTemplate();
+        return MoviesListTemplate(
+          movies: state.movies,
+          isLoading: state.moviesListStatus.isLoading,
+        );
       },
     );
   }

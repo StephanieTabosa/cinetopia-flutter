@@ -1,7 +1,6 @@
 class MoviesStrings {
   static const home = _HomeStrings();
-
-  static String get pixKey => 'Chave PIX';
+  static const movies = _MoviesListStrings();
 }
 
 class _HomeStrings {
@@ -9,4 +8,12 @@ class _HomeStrings {
 
   String get description => 'O lugar ideal para buscar, salvar e organizar seus filmes favoritos!';
   String get buttonText => 'Quero começar!';
+}
+
+class _MoviesListStrings {
+  const _MoviesListStrings();
+
+  String get title => 'Filmes populares';
+  String release(String date) => 'Lançamento: $date';
+  String get errorMessage => 'Erro ao carregar filmes, volte e tente novamente';
 }

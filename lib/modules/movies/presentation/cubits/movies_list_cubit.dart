@@ -23,5 +23,31 @@ class MoviesListCubit extends Cubit<MoviesListState> {
   final GetMoviesListUsecase _getMoviesListUsecase;
 
   // Actions
-  void onInit() {}
+  void onInit() {
+    _getMoviesList();
+  }
+
+  Future<void> _getMoviesList() async {
+    emit(state.copyWith(moviesListStatus: Status.loading));
+    final result = await _getMoviesListUsecase.getMoviesList();
+
+    result.fold(
+      (failure) {
+        emit(
+          state.copyWith(
+            moviesListStatus: Status.failure,
+            failure: failure,
+          ),
+        );
+      },
+      (movies) {
+        emit(
+          state.copyWith(
+            movies: movies,
+            moviesListStatus: Status.success,
+          ),
+        );
+      },
+    );
+  }
 }

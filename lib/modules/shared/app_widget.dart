@@ -14,9 +14,11 @@ class AppWidget extends StatelessWidget {
         primaryColor: Colors.transparent,
         scaffoldBackgroundColor: AppColors.primary,
         appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            iconTheme: IconThemeData(color: AppColors.secondary)),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          shadowColor: Colors.transparent,
+          iconTheme: IconThemeData(color: AppColors.secondary),
+        ),
         buttonTheme: const ButtonThemeData(
           buttonColor: AppColors.secondary,
         ),

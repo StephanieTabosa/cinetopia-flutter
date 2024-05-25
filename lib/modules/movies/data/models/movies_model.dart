@@ -16,7 +16,7 @@ class MoviesModel extends Movies {
       title: json['title'],
       image: json['image'],
       synopsis: json['synopsis'],
-      rate: json['rate'],
+      rate: json['rate'].toDouble(),
       releaseDate: json['releaseDate'],
     );
   }

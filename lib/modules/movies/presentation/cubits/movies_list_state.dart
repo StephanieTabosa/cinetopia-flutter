@@ -7,7 +7,7 @@ class MoviesListState extends Equatable {
     this.failure,
   });
 
-  final List<Movies>? movies;
+  final List<Movies> movies;
   final Status moviesListStatus;
   final Failure? failure;
 
