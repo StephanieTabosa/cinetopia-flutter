@@ -5,8 +5,8 @@ import '../../../../shared/constants/app_colors.dart';
 import '../../../domain/entities/movies.dart';
 import '../../../movies_strings.dart';
 
-class MovieItem extends StatelessWidget {
-  const MovieItem({
+class MovieItemMolecule extends StatelessWidget {
+  const MovieItemMolecule({
     Key? key,
     required this.movie,
   }) : super(key: key);

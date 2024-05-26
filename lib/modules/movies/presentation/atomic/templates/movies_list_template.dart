@@ -4,7 +4,7 @@ import 'package:cinetopia_flutter/modules/shared/constants/app_text_styles.dart'
 import '../../../../shared/constants/app_colors.dart';
 import '../../../domain/entities/movies.dart';
 import '../../../movies_strings.dart';
-import '../molecules/movie_item.dart';
+import '../molecules/movie_item_molecule.dart';
 
 class MoviesListTemplate extends StatelessWidget {
   const MoviesListTemplate({
@@ -74,9 +74,7 @@ class MoviesListTemplate extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return InkWell(
                       onTap: () => openDetailsPage(movies[index]),
-                      child: MovieItem(
-                        movie: movies[index],
-                      ),
+                      child: MovieItemMolecule(movie: movies[index]),
                     );
                   },
                 ),
