@@ -4,7 +4,6 @@ Cinetopia é um aplicativo Flutter que permite aos usuários explorar e descobri
 
 ![app](https://github.com/StephanieTabosa/cinetopia-flutter/assets/41654616/aeb50a25-ed36-4cc8-b391-efa82a4011a6)
 
-
 ## Contexto do Problema
 
 Com o aumento da demanda por conteúdo de entretenimento, encontrar filmes para assistir pode se tornar uma tarefa desafiadora. Muitos usuários desejam uma maneira fácil e conveniente de descobrir novos filmes com base em seus interesses e preferências pessoais. Além disso, a falta de uma plataforma centralizada para explorar uma ampla variedade de filmes pode levar à frustração e ao desperdício de tempo dos usuários.
@@ -17,7 +16,6 @@ Com uma interface limpa e recursos de navegação simples, o Cinetopia Flutter p
 
 ## Funcionalidades Futuras
 
-- Adicionar ícone ao aplicativo
 - Criar ambientes de mock, hmg, dev, prod
 - Adicionar um campo de busca de filmes
 - Paginação de resultados
