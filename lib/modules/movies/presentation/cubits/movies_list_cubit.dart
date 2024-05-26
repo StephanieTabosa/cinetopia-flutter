@@ -23,8 +23,8 @@ class MoviesListCubit extends Cubit<MoviesListState> {
   final GetMoviesListUsecase _getMoviesListUsecase;
 
   // Actions
-  void onInit() {
-    _getMoviesList();
+  Future<void> onInit() async {
+    await _getMoviesList();
   }
 
   Future<void> _getMoviesList() async {
